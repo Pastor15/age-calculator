@@ -1,0 +1,131 @@
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+  --Black: black;
+}
+
+@font-face {
+  font-family: Pop;
+  src: url(./icon-arrow.svg);
+}
+
+* {
+  font-family: Pop !important;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: var(--Off-white);
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: var(--White);
+  width: 420px;
+  max-width: 100%;
+  padding: 30px;
+  position: relative;
+  border-bottom-right-radius: 150px;
+}
+
+input {
+  width: 70px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid var(--Off-white);
+  outline: none;
+}
+
+input:focus {
+  border: 2px solid var(--Purple);
+}
+
+small {
+  color: red;
+  font-size: 0.6rem;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.submit-btn {
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  display: flex;
+  background-color: var(--Purple);
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  right: 2px;
+  top: 60px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: var(--Purple);
+}
+
+.output span {
+  font-size: 4.75rem;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+.output .output-year {
+  font-size: 100px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 1.75rem;
+}
+
+.input-flex {
+  display: flex;
+  border-bottom: 2px solid var(--Off-white);
+  margin-bottom: 20px;
+  padding-right: 80px;
+}
+
+.age-value {
+  color: var(--Purple);
+  font-weight: bold;
+}
+
+.age-label {
+  color: var(--Black);
+}
+
+@media (max-width: 768px) {
+  input {
+    width: 80%;
+  }
+
+  .output span {
+    font-size: 1.75rem;
+  }
+
+  .submit-btn {
+    width: 40px;
+    height: 40px;
+    right: 40%;
+    top: 90px;
+  }
+
+  .submit-btn img {
+    transform: scale(0.5);
+  }
+}
